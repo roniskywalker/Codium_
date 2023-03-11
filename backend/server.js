@@ -1,9 +1,12 @@
 const express = require('express');
+const cors = require('cors');
 
 const { createCppFile } = require('./createCppFile');
 const { runCpp } = require('./runCpp');
 
 const app = express();
+
+app.use(cors());
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
