@@ -7,6 +7,7 @@ function App() {
   const [code, setCode] = useState(" ");
   const [output, setOutput] = useState("");
   const [language, setLanguage] = useState("cpp");
+  const [status, setStatus] = useState("");
 
   const handleSubmit = async () => {
     const payload = {
@@ -14,9 +15,38 @@ function App() {
       code
     };
     try{
+
+      setStatus("");
+      setOutput("");
+      
     const {data} = await axios.post("http://localhost:5000/run", payload);
     
-    setOutput(data.output);
+    console.log(data);
+    // setOutput(data.jobId);
+
+    let intervalId;
+
+
+    intervalId = setInterval( async () => {
+      const {data: dataRes} = await axios.get("http://localhost:5000/status", {params:{id: data.jobId}});
+      const {success, job, error} = dataRes;
+      console.log(dataRes);
+
+      if(success){
+        const {status:jobStatus, output:jobOutput} = job;
+        setStatus(jobOutput);
+        if (jobStatus==="pending") return;
+        setOutput(jobOutput);
+        clearInterval(intervalId);
+      }else{
+        setStatus("Error");
+        console.error(error);
+        clearInterval(intervalId);
+        setOutput(error)
+      }
+
+      console.log(dataRes);
+    },1000);
 
     } catch({response}){
     if(response){
@@ -35,11 +65,10 @@ function App() {
       <div>
         <label>Language: </label>
         <select
-        value = {language}
-        onChange={(e)=>{
+          value={language}
+          onChange={(e) => {
             setLanguage(e.target.value);
-          }
-        }
+          }}
         >
           <option value="cpp">C++</option>
           <option value="py">Python</option>
@@ -56,6 +85,7 @@ function App() {
       ></textarea>
       <button onClick={handleSubmit}>Submit</button>
       <label>Output: </label>
+      <p>{status}</p>
       <p>{output}</p>
     </div>
   );
