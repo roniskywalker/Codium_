@@ -6,7 +6,7 @@ const codesDir = path.join(__dirname, "codes");
 
 if (!fs.existsSync(codesDir)) {
   fs.mkdirSync(codesDir, { recursive: true });
-};
+}
 
 const createFile = async (language, code) => {
   const jobId = uuid();
@@ -17,5 +17,5 @@ const createFile = async (language, code) => {
 };
 
 module.exports = {
-  createFile
+  createFile,
 };
