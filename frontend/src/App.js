@@ -9,7 +9,7 @@ function App() {
   const [output, setOutput] = useState("");
   const [language, setLanguage] = useState("cpp");
   const [jobId, setJobId] = useState(null);
-  const [status, setStatus] = useState(null);
+  const [status, setStatus] = useState("");
   const [jobDetails, setJobDetails] = useState(null);
 
   useEffect(() => {
@@ -100,14 +100,18 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Koden_</h1>
-      <div>
-        <label>Language: </label>
+      <header>
+        <h1>Koden_</h1>
+        <span>Online Code Compiler</span>
+      </header>
+
+      <div className="language">
+        <label> Select Language & Submit</label>
         <select
           value={language}
           onChange={(e) => {
             let response = window.confirm(
-              "Swithching your language will effect your code"
+              "Switching your language will effect your code"
             );
             if (response) {
               setLanguage(e.target.value);
@@ -118,24 +122,44 @@ function App() {
           <option value="py">Python</option>
           <option value="js">JavaScript</option>
         </select>
-      </div>
-      <div>
         <button onClick={setDefaultLanguage}>Set default</button>
+        <button onClick={handleSubmit}>Run</button>
       </div>
-      <textarea
-        rows="30"
-        cols="100"
-        value={code}
-        onChange={(e) => {
-          setCode(e.target.value);
-        }}
-      ></textarea>
-      <button onClick={handleSubmit}>Submit</button>
-      <p>{jobId ? `Job ID: ${jobId}` : ""}</p>
-      <p>{status}</p>
-      <p>{renderTimeDetails()}</p>
-      <label>Output: </label>
-      <p>{output}</p>
+
+      <div className="container">
+        <div className="left">
+          <label>
+            <i class="fa-regular fa-square-code"></i> Source Code
+          </label>
+          <textarea
+            value={code}
+            onChange={(e) => {
+              setCode(e.target.value);
+            }}
+          ></textarea>
+        </div>
+
+        <div className="right">
+          <div className="output">
+            <label>
+              <i class="fa-regular fa-square-terminal"></i> Output
+            </label>
+            <div className="top">
+              <p>{output}</p>
+            </div>
+          </div>
+          <div className="job">
+            <label>
+              <i class="fa-regular fa-cube"></i> Job
+            </label>
+            <div className="bottom">
+              <p>{`Status: ${status}`}</p>
+              <p>{jobId ? `Job ID: ${jobId}` : ""}</p>
+              <p>{renderTimeDetails()}</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono&family=Press+Start+2P&family=Roboto+Mono&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+body{
+    background-color:#1f2023;
+}
+select, button{
+    cursor: pointer;
+}
+header{
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-bottom: 25px;
+}
+header h1{
+    font-family: 'Press Start 2P', cursive;
+}
+span,label,p,h1{
+    color: aliceblue;
+}
+.language{
+    margin: 0px 15px;
+    padding: 10px;
+    text-align: center;
+}
+.language label{
+    display: block;
+    text-align: center;
+}
+.language button, select{
+    margin: 5px 15px 0px 0px;
+}
+.container
+{
+    width: 100%;
+    height: 79vh;
+    padding: 15px;
+    display: flex;
+}
+.left, .right
+{
+    flex-basis: 50%;
+    padding: 10px;
+}
+.left textarea{
+    width: 100%;
+    height: 70vh;
+    background-color: #1c2130;
+    padding: 15px;
+    font-size: 18px;
+    color: aliceblue;
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: 3px 7px aliceblue;
+
+    resize: none;
+}
+.top{
+    height: 42vh;
+    box-shadow: 3px 7px aliceblue;
+}
+.bottom{
+    height: 23vh;
+    box-shadow: 3px 7px aliceblue;
+}
+.bottom, .top
+{
+    width: 100%;
+    background-color: #1c2130;
+    border: 0;
+    outline: 0;
+}
+.job{
+    margin-top: 2vh;
+}
+label{
+    display: flex;
+    align-items: center;
+    background: #0e0d0d;
+    height: 3vh;
+    font-size: 20px;
+    font-family: 'Martian Mono', monospace;
+}
+
+select{
+    border-radius: 10px;
+    padding: 4px;
+    text-decoration: none;
+}
+
+button{
+    background: #ffffff;
+  background-image: -webkit-linear-gradient(top, #ffffff, #e3e3e3);
+  background-image: -moz-linear-gradient(top, #ffffff, #e3e3e3);
+  background-image: -ms-linear-gradient(top, #ffffff, #e3e3e3);
+  background-image: -o-linear-gradient(top, #ffffff, #e3e3e3);
+  background-image: linear-gradient(to bottom, #ffffff, #e3e3e3);
+  -webkit-border-radius: 15;
+  -moz-border-radius: 15;
+  border-radius: 10px;
+  font-family: Arial;
+  color: #000000;
+  padding: 5px;
+  text-decoration: none;
+}
+
+button:hover{
+  background: #46578c;
+  background-image: -webkit-linear-gradient(top, #46578c, #1c2130);
+  background-image: -moz-linear-gradient(top, #46578c, #1c2130);
+  background-image: -ms-linear-gradient(top, #46578c, #1c2130);
+  background-image: -o-linear-gradient(top, #46578c, #1c2130);
+  background-image: linear-gradient(to bottom, #46578c, #1c2130);
+  color: aliceblue;
+  text-decoration: none;
+}
