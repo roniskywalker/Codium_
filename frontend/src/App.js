@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import stubs from "./defaultStubs";
 import moment from "moment";
+import { Terminal, Code, Activity } from "react-feather";
 
 function App() {
   const [code, setCode] = useState("");
@@ -88,7 +89,7 @@ function App() {
     let { submittedAt, startedAt, completedAt } = jobDetails;
     let result = "";
     submittedAt = moment(submittedAt).toString();
-    result += `Job Submitted At: ${submittedAt}  `;
+    result += `Code Submitted At: ${submittedAt}  `;
     if (!startedAt || !completedAt) return result;
     const start = moment(startedAt);
     const end = moment(completedAt);
@@ -106,7 +107,7 @@ function App() {
       </header>
 
       <div className="language">
-        <label> Select Language & Submit</label>
+        <label> Select Language & Run</label>
         <select
           value={language}
           onChange={(e) => {
@@ -120,7 +121,7 @@ function App() {
         >
           <option value="cpp">C++</option>
           <option value="py">Python</option>
-          <option value="js">JavaScript</option>
+          {/* <option value="js">JavaScript</option> */}
         </select>
         <button onClick={setDefaultLanguage}>Set default</button>
         <button onClick={handleSubmit}>Run</button>
@@ -129,7 +130,7 @@ function App() {
       <div className="container">
         <div className="left">
           <label>
-            <i class="fa-regular fa-square-code"></i> Source Code
+            <Code /> Source Code
           </label>
           <textarea
             value={code}
@@ -142,19 +143,19 @@ function App() {
         <div className="right">
           <div className="output">
             <label>
-              <i class="fa-regular fa-square-terminal"></i> Output
+              <Terminal /> Output
             </label>
             <div className="top">
               <p>{output}</p>
             </div>
           </div>
-          <div className="job">
+          <div className="status">
             <label>
-              <i class="fa-regular fa-cube"></i> Job
+              <Activity /> Status
             </label>
             <div className="bottom">
-              <p>{`Status: ${status}`}</p>
-              <p>{jobId ? `Job ID: ${jobId}` : ""}</p>
+              <p>{status ? `Status: ${status}` : ""}</p>
+              <p>{jobId ? `Code ID: ${jobId}` : ""}</p>
               <p>{renderTimeDetails()}</p>
             </div>
           </div>
