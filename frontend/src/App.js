@@ -121,7 +121,7 @@ function App() {
         >
           <option value="cpp">C++</option>
           <option value="py">Python</option>
-          {/* <option value="js">JavaScript</option> */}
+          <option value="js">JavaScript</option>
         </select>
         <button onClick={setDefaultLanguage}>Set default</button>
         <button onClick={handleSubmit}>Run</button>
