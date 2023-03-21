@@ -16,9 +16,11 @@ const runCpp = (filePath) => {
     exec(
       `g++ ${filePath} -o ${outputPath} && cd ${outputsDir} && ./${jobId}.out`,
       (error, stdout, stderr) => {
+        fs.unlinkSync(filePath);
         error && reject({ error, stderr });
         stderr && reject(stderr);
         resolve(stdout);
+        fs.unlinkSync(outputPath);
       }
     );
   });
