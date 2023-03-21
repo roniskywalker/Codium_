@@ -59,19 +59,20 @@ span,label,p,h1{
     border: none;
     overflow: auto;
     outline: none;
+    resize: none;
 
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: 3px 7px aliceblue;
-
-    resize: none;
 }
 .top{
-    height: 42vh;
+    height: 50vh;
+    padding: 15px;
     box-shadow: 3px 7px aliceblue;
 }
 .bottom{
-    height: 23vh;
+    height: 15vh;
+    padding: 15px;
     box-shadow: 3px 7px aliceblue;
 }
 .bottom, .top
@@ -92,13 +93,11 @@ label{
     font-size: 20px;
     font-family: 'Martian Mono', monospace;
 }
-
 select{
     border-radius: 10px;
     padding: 4px;
     text-decoration: none;
 }
-
 button{
     background: #ffffff;
   background-image: -webkit-linear-gradient(top, #ffffff, #e3e3e3);
@@ -114,7 +113,6 @@ button{
   padding: 5px;
   text-decoration: none;
 }
-
 button:hover{
   background: #46578c;
   background-image: -webkit-linear-gradient(top, #46578c, #1c2130);
