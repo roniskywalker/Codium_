@@ -49,7 +49,7 @@ function App() {
             }
           );
           const { success, job, error } = statusRes;
-          console.log(statusRes);
+          // console.log(statusRes);
           if (success) {
             const { status: jobStatus, output: jobOutput } = job;
             setStatus(jobStatus);
@@ -107,7 +107,7 @@ function App() {
       </header>
 
       <div className="language">
-        <label> Select Language & Run</label>
+        <label> Select Language, Write Code & Run</label>
         <select
           value={language}
           onChange={(e) => {
