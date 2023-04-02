@@ -20,7 +20,7 @@ const runCpp = (filePath) => {
         stderr && reject(stderr);
         resolve(stdout);
         fs.unlinkSync(filePath);
-        fs.unlinkSync(outputPath);
+        //fs.unlinkSync(outputPath);
       }
     );
   });
