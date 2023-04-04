@@ -7,8 +7,8 @@ Online Code Compiler❤‍🔥
 ## Features🪄
 
 - It supports 3 programming languages - Python, C++ and Javascript💫
+- It shows execution time & status of the program⚡
 - Boilerplate code is implemented💯 
-- It shows execution time & status⚡
 - 'Set default' feature is available✨
 - Dark mode is enabled🎨
 - It is Light-weight also😺
