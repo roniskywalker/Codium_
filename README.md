@@ -1,7 +1,8 @@
 # Koden_
 
 Online Code Compiler❤‍🔥
-NOTE: It is only supported in LINUX.
+
+[NOTE: It is only supported in LINUX.]
 
 ## Features🪄
 
