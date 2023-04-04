@@ -1,14 +1,14 @@
 # Koden_
 
 Online Code Compiler❤‍🔥
-
+NOTE: It is only supported in LINUX.
 
 ## Features🪄
 
 - It supports 3 programming languages - Python, C++ and Javascript💫
 - Boilerplate code is implemented💯 
 - It shows execution time & status⚡
-- 'Set default' feature is available👍🏻
+- 'Set default' feature is available✨
 - Dark mode is enabled🎨
 - It is Light-weight also😺
 
