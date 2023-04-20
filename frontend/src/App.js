@@ -89,7 +89,7 @@ function App() {
     let { submittedAt, startedAt, completedAt } = jobDetails;
     let result = "";
     submittedAt = moment(submittedAt).toString();
-    result += `Code Submitted At: ${submittedAt}  `;
+    result += `Submitted At: ${submittedAt}  `;
     if (!startedAt || !completedAt) return result;
     const start = moment(startedAt);
     const end = moment(completedAt);
@@ -102,7 +102,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Koden_</h1>
+        <h1>Codium_</h1>
         <span>Online Code Compiler</span>
       </header>
 
@@ -155,7 +155,6 @@ function App() {
             </label>
             <div className="bottom">
               <p>{status ? `Status: ${status}` : ""}</p>
-              <p>{jobId ? `Code ID: ${jobId}` : ""}</p>
               <p>{renderTimeDetails()}</p>
             </div>
           </div>

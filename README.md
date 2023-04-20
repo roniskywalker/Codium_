@@ -1,8 +1,6 @@
-# Koden_
+# Codium_
 
 Online Code Compiler❤‍🔥
-
-[NOTE: It is only supported in LINUX.]
 
 ## Features🪄
 
@@ -19,13 +17,7 @@ Online Code Compiler❤‍🔥
 👉Clone the project
 
 ```bash
-  git clone https://github.com/roniskywalker/Koden_.git
-```
-
-👉Go to main directory
-
-```bash
-  cd ./Koden_
+  git clone https://github.com/roniskywalker/Codium_.git
 ```
 
 👉Go to frontend directory
@@ -34,7 +26,7 @@ Online Code Compiler❤‍🔥
   cd ./frontend
 ```
 
-👉Install react dependencies
+👉Delete package-lock.json & Install react dependencies
 
 ```bash
   npm install
@@ -49,19 +41,19 @@ Online Code Compiler❤‍🔥
 👉Go to backend directory
 
 ```bash
-  cd ../backend
+  cd ./backend
 ```
 
-👉Start mongo server 
+👉Delete node_modules & Install node dependencies
+
+```bash
+  npm install
+```
+
+👉Start the mongoDB server 
 
 ```bash
   mongod
-```
-
-👉Install node dependencies
-
-```bash
-  npm init
 ```
 
 👉Start the server
@@ -70,10 +62,8 @@ Online Code Compiler❤‍🔥
   npm run dev
 ```
 
-
 ## Demo🔮
-
-![Screenshot_20230404_142544](https://user-images.githubusercontent.com/97012708/229747335-afb141f9-fa57-425b-a7a8-0ce5ec335aee.png)
+![Screenshot_20230421_011940](https://user-images.githubusercontent.com/97012708/233472880-b3559112-bb3e-49fc-8c85-1be6392c2d37.png)
 
 
 ## Thank You😀

@@ -15,12 +15,13 @@ select, button{
     cursor: pointer;
 }
 header{
-    padding-top: 25px;
+    padding-top: 35px;
     padding-left: 25px;
     padding-bottom: 25px;
 }
 header h1{
     font-family: 'Press Start 2P', cursive;
+    font-size: 28px;
 }
 span,label,p,h1{
     color: aliceblue;
