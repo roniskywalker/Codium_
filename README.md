@@ -63,7 +63,8 @@ Online Code Compiler❤‍🔥
 ```
 
 ## Demo🔮
-![Screenshot_20230421_011940](https://user-images.githubusercontent.com/97012708/233472880-b3559112-bb3e-49fc-8c85-1be6392c2d37.png)
+
+![Screenshot_20230421_011940](https://user-images.githubusercontent.com/97012708/233477220-71b8b7ff-919e-4476-a010-2fcd98664a91.png)
 
 
 ## Thank You😀
